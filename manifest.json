@@ -1,8 +1,9 @@
 {
 	"manifest_version": 2,
-	"name": "efmrl",
-	"description": "Quickly share or transfer links between devices.",
-	"version": "1.0.0",
+	"name": "efmrl.link",
+	"short_name": "efmrl",
+	"description": "Quickly share or transfer efmrl links between devices.",
+	"version": "1.0.1",
 	"browser_action": {
 		"default_popup": "popup.html"
 	},
