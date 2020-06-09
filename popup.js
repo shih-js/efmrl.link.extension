@@ -1,5 +1,5 @@
 (() => {
-	chrome.tabs.query({ active: true, currentWindow: true }, tab => {
+	chrome.tabs.query({ active: true, currentWindow: true }, (tab) => {
 		const currentPage = tab[0].url;
 		const efmrlContainer = document.getElementById('efmrl-container');
 
@@ -11,7 +11,8 @@
 		efmrlPortalEl.addEventListener('load', () => {
 			setTimeout(() => {
 				efmrlPortalEl.focus();
-				efmrlPortal.postMessage(currentPage, '*');
+				// efmrlPortal.postMessage(currentPage, '*');
+				efmrlPortal.postMessage({ type: 'copy-to-clipboard', currentPage }, '*');
 			}, 500);
 		});
 	});
