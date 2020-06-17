@@ -22,13 +22,14 @@
 		const efmrlPortalEl = document.getElementById('efmrl-portal');
 
 		efmrlPortalEl.addEventListener('load', () => {
-			console.log('currentPage: ', currentPage);
 			setTimeout(() => {
+				console.log('currentPage: ', currentPage);
 				const efmrlPortal = efmrlPortalEl.contentWindow;
 				efmrlPortalEl.focus();
-				efmrlPortal.postMessage(currentPage, '*');
+				efmrlPortal.postMessage({ currentPage }, '*');
+				// efmrlPortal.postMessage(currentPage, '*');
 				// efmrlPortal.postMessage({ type: 'copy-to-clipboard', currentPage }, '*');
-			}, 500);
+			}, 1000);
 		});
 	});
 })();
