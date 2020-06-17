@@ -10,12 +10,10 @@
 				height="440"
 				width="280"
 				scrolling="no"
-				allow="layout-animations '*';
-					unoptimized-images '*';
-					oversized-images '*';
-					sync-script '*';
-					sync-xhr '*';
-					unsized-media '*';"
+				allow="
+					clipboard-write;
+					clipboard-write '*';
+				"
 			>
 			</iframe>`;
 
