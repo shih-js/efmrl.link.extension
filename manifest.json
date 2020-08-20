@@ -3,11 +3,11 @@
 	"name": "efmrl.link",
 	"short_name": "efmrl",
 	"description": "Quickly share or transfer ephemeral links between devices.",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"browser_action": {
 		"default_popup": "popup.html"
 	},
-	"permissions": ["activeTab"],
+	"permissions": ["activeTab", "clipboardWrite"],
 	"icons": {
 		"16": "images/efmrl-16.png",
 		"48": "images/efmrl-48.png",

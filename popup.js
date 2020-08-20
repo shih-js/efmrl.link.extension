@@ -7,13 +7,9 @@
 				id="efmrl-portal"
 				title="efmrl"
 				src="https://www.efmrl.link/"
-				height="440"
-				width="280"
+				height="500"
+				width="310"
 				scrolling="no"
-				allow="
-					clipboard-write;
-					clipboard-write '*';
-				"
 			>
 			</iframe>`;
 
@@ -21,7 +17,7 @@
 
 		efmrlPortalEl.addEventListener('load', () => {
 			setTimeout(() => {
-				console.log('currentPage: ', currentPage);
+				// console.log('currentPage: ', currentPage);
 				const efmrlPortal = efmrlPortalEl.contentWindow;
 				efmrlPortalEl.focus();
 				efmrlPortal.postMessage({ currentPage }, '*');
