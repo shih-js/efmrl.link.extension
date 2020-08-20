@@ -21,8 +21,16 @@
 				const efmrlPortal = efmrlPortalEl.contentWindow;
 				efmrlPortalEl.focus();
 				efmrlPortal.postMessage({ currentPage }, '*');
-				// efmrlPortal.postMessage(currentPage, '*');
-				// efmrlPortal.postMessage({ type: 'copy-to-clipboard', currentPage }, '*');
+
+				// Wait for message to get returned, then copy.
+				window.addEventListener(
+					'message',
+					async (data) => {
+						const { efmrlink } = data.data;
+						await navigator.clipboard.writeText(efmrlink);
+					},
+					false
+				);
 			}, 1000);
 		});
 	});
